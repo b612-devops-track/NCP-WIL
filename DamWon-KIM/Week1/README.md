@@ -1,7 +1,10 @@
+## 1강-6강
+# 클라우드 서버 생성 및 서버 이미지로 서버 추가</br>
+
 ![접속.jpg](접속.jpg) </br></br>
 ![apm 설치.jpg](apm설치.jpg)
 
-# Load Balancer종류
+# Load Balancer종류</br>
 
 애플리케이션 로드밸런서 HTTP/HTTPS</br></br>
 네트워크 로드밸런서 TCP  DSR</br></br>
