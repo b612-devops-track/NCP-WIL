@@ -1,5 +1,5 @@
-[!접속.jpg][접속.jpg] </br></br>
-[!apm 설치.jpg][apm설치.jpg]
+[!접속.jpg](접속.jpg) </br></br>
+[!apm 설치.jpg](apm설치.jpg)
 
 # Load Balancer종류
 
