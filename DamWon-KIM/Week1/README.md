@@ -1,5 +1,5 @@
-[!접속.png][접속.png] </br></br>
-[!apm 설치.png][apm설치.png]
+[!접속.jpg][접속.jpg] </br></br>
+[!apm 설치.jpg][apm설치.jpg]
 
 # Load Balancer종류
 
@@ -15,6 +15,11 @@ CDN+ 국내전용/GCDN 글로벌 전용
 
 Networking = NAT Gateway
   - Autosacling과 관련된 자동 설정 제공
+
+Global Route Manager
+  - 여러 region으로 Load Balancing을 도와주는 서비스
+  - DNS를 기반으로 사용할 수 있음
+  - 분배 알고리즘을 가지고 있다(Round Robin, Weighted ,GeoLocation, Failover)
 
 
 
