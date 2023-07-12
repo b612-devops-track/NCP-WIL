@@ -35,7 +35,8 @@
 
 - 완전관리형 데이터베이스 서버로서, 자동 Fail-over서비스(→ 최대 5대까지 확장 가능)와 자동 백업 서비스 제공
     
-    ![Untitled](essential%20hands-on%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20420bf6acdba8479590cb62e34fc49a72/Untitled.png)
+![1](https://github.com/yj-leez/NCP-WIL/assets/77960090/a1871422-2712-4973-8949-757b074f3de4)
+
     
 - Private Load Balancer를 통해 Read 분산 가능
 - 제공하는 부가적인 기능
