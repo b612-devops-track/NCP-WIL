@@ -33,7 +33,9 @@ Obejct Stroage란?
 정적 웹사이트 호스팅 가능
 
 객체 스토리지는 객체라고 하는 비정형 형식으로 데이터를 저장하고 관리하는 기술입니다. 현대적인 조직에서는 사진, 동영상, 이메일, 웹 페이지, 센서 데이터 및 오디오 파일과 같은 다량의 비정형 데이터를 생성하고 분석
-![mount.jpg](mount까지.jpg) </br>
+
+
+![mount.jpg](mount.jpg) </br>
 ![nas-server_mount.jpg](nas-server_mount.jpg)
 
 ### 9강
