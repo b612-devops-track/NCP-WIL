@@ -1,19 +1,24 @@
 ## Preview
-Load Balancer 및 Auto-scaling
-
+Load Balancer 및 Auto-scaling</br>
 여러 대의 Server에게 균등하게 Traffic을 분산시켜주는 역할을 하는 것이 Load Balancer
 
+</br>
 Load Balancing이란?
+
 하나의 인터넷 서비스가 발생하는 트래픽이 많을 때 여러 대의 서버가 분산처리하여 서버의 로드율 증가, 부하량, 속도저하 등을 고려하여 적절히 분산처리하여 해결해주는 서비스
 
+</br>
 NAT(Network Address Translation)
 
-사설 IP 주소를 공인 IP 주소로 바꾸는 데 사용하는 통신망의 주소 변조기입니다.
+사설 IP 주소를 공인 IP 주소로 바꾸는 데 사용하는 통신망의 주소 변조기
 
+</br>
 Tunneling
 
 인터넷상에서 눈에 보이지 않는 통로를 만들어 통신할 수 있게 하는 개념
-데이터를 캡슐화해서 연결된 상호 간에만 캡슐화된 패킷을 구별해 캡슐화를 해제할 수 있습니다.
+데이터를 캡슐화해서 연결된 상호 간에만 캡슐화된 패킷을 구별해 캡슐화를 해제할 수 있다.
+
+</br>
 DSR(Dynamic Source Routing protocol)
 
 로드 밸런서 사용 시 서버에서 클라이언트로 되돌아가는 경우 목적지 주소를 스위치의 IP 주소가 아닌 클라이언트의 IP 주소로 전달해서 네트워크 스위치를 거치지 않고 바로 클라이언트를 찾아가는 개념
@@ -28,8 +33,8 @@ Obejct Stroage란?
 정적 웹사이트 호스팅 가능
 
 객체 스토리지는 객체라고 하는 비정형 형식으로 데이터를 저장하고 관리하는 기술입니다. 현대적인 조직에서는 사진, 동영상, 이메일, 웹 페이지, 센서 데이터 및 오디오 파일과 같은 다량의 비정형 데이터를 생성하고 분석
-![mount까지.png](mount까지.png)
-![리눅스끼리공유가능한~]
+![mount.jpg](mount까지.jpg) </br>
+![nas-server_mount.jpg](nas-server_mount.jpg)
 
 ### 9강
 ## 데이터베이스
@@ -44,3 +49,6 @@ Key, Value 구조의 비정형 데이터를 저장하고 관리하기 위한 오
 Principal Server가 장애가 발생하면 Mirror Server가 Principal DB로 올라오면서 지속적으로 고가용성을 유지하는 기능을 제공함
 
 Cloud DB for MS-SQL
+
+![mysql_cloud.jpg](mysql_cloud.jpg) </br>
+![analytics_done.jpg](analytics_done.jpg)
