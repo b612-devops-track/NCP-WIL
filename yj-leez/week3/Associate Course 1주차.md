@@ -3,8 +3,8 @@
 ## 1강. ****과정 소개 및 네이버클라우드플랫폼 서비스 개요****
 
 ### 네이버 클라우드 플랫폼 역사
+![1](https://github.com/yj-leez/NCP-WIL/assets/77960090/afe5ef0a-4b7c-468a-aca1-306822387816)
 
-![Untitled](Associate%20Course%201%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20cd47a92217ef4afbb04b615166540e28/Untitled.png)
 
 - 공공 Cloud
     - 국내의 공공기관은 공공 클라우드 인증을 받은 클라우드만 이용 가능 → 들어가는 경로, 제공하는 상품들이 다름
@@ -28,7 +28,8 @@
 
 ### 네이버 클라우드 플랫폼 전체 상품 라인업
 
-![스크린샷 2023-07-19 오전 12.43.44.png](Associate%20Course%201%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20cd47a92217ef4afbb04b615166540e28/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-07-19_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_12.43.44.png)
+<img width="847" alt="2" src="https://github.com/yj-leez/NCP-WIL/assets/77960090/b49d141a-b718-4341-83df-77e2d67b324c">
+
 
 - IaaS 상품군: Compute, Storage, Networking
     - IaaS: CPU나 하드웨어 등의 컴퓨팅 리소스를 네트워크를 통해 이용하는 형태
@@ -45,36 +46,30 @@
 
 | Classic | VPC |
 | --- | --- |
-| 2VCPU~16VCPU 상품부터 High Memory 서버, VDS, HPC, GPU 등 다양한 상품 라인업 | 서비스 규모와 사용목적에 적합한 성능의 서버를 선택할 수 있도록 다양한 서버 타입 제공
-* GPU 상품은 VM 1대 당 최대 8개까지 장착 가능하게 업데이트 될 예정 |
-| 체험용 서버인 마이크로 서버 제공 | 어플리케이션 이미지는 현재 제공하지 않음
-네트웍 인터페이스는 서버당 최대 3개까지 구성 가능 |
+| 2VCPU~16VCPU 상품부터 High Memory 서버, VDS, HPC, GPU 등 다양한 상품 라인업 | 서비스 규모와 사용목적에 적합한 성능의 서버를 선택할 수 있도록 다양한 서버 타입 제공(GPU 상품은 VM 1대 당 최대 8개까지 장착 가능하게 업데이트 될 예정) |
+| 체험용 서버인 마이크로 서버 제공 | 어플리케이션 이미지는 현재 제공하지 않음,네트웍 인터페이스는 서버당 최대 3개까지 구성 가능 |
 | G1과 G2로 구분하여 제공 | G2만 제공 |
-| SSD, HDD 디스크(SaaS 방식) 타입 제공
-• IO 퍼포먼스 차별화
-• SSD 사용 시 최대IOPS 보장 (4천 ~ 2만 IOPS) | Classic과 동일 |
-| • 컴퓨팅(CPU. 메모리), 네트워크(outbound), 스토리지 요금이 발생
-• 서버 정지 시 컴퓨팅, 네트웍 요금은 발생하지 않으나 스토리지 비용 발생 ( Micro, Compact, Standard)
-• 서버 정지 시 표준 요금이 적용되는 서버 ( High Memory서버, VDS,GPU 서버) |  |
+| SSD, HDD 디스크(SaaS 방식) 타입 제공 | - |
+
 
 ### Classic 서버 타입
 
 1. Micro (1vCPU, 1G RAM, 50G HDD)
     - 한국에서만 제공되는 서비스
     - 서비스 체험용(테스트 용도)
-2. Compact ( 2~16vCPU. 4G~ 32G RAM)
+2. Compact ( 2~16vCPU, 4G~ 32G RAM)
     - 저사양 서버
     - 개발 테스트 서버, 개인 홈페이지 운영, 소규모 웹사이트 운영
-3. Standard ( 2~16vCPU. 4G~ 32G RAM)
+3. Standard ( 2~16vCPU, 4G~ 32G RAM)
     - IT비즈니스에 활용할 수 있는 네이버 클라우드 플랫폼 서비스 범용 서버
     - 중/대규모 모바일 및 웹 서비스 운영
     - 게임/미디어/금융 서비스 운영
 4. High Memory ( 8~32vCPU, 64 ~ 256G RAM)
     - 64GB이상의 고 메모리 서버, 데이터 애플리케이션 운영
     - 고성능 데이터베이스 서버, 대규모 게임 서비스
-5. VDS ( 20~32vCPU, 80~232G RAM, 1~2TB HDD)
+5. VDS ( 20-32 vCPU, 80~232G RAM, 1~2TB HDD)
     - VM 1개만 제공 → 하드웨어 점유를 한 개가 함 → 안정적인 시스템
-6. CPU Intensive ( 20~32vCPU, 80~232G RAM, 1~2TB HDD)
+6. CPU Intensive ( 20-32 vCPU, 80~232G RAM, 1~2TB HDD)
     - 대규모 연산 시 빠른 처리가 필요한 업무에 적함
     - 머신/딥 러닝용 처리서버, 고성능 웹서버, HPC/배치 처리, 비디오 인코딩
 7. GPU( 4 or 8vCPU, 30 or 60G RAM, 50G HDD)
@@ -82,8 +77,7 @@
     - NVIDIA GRID 기술이 아닌 Pass Through를 적용해 제공,  서버당 최대 2장의 GPU제공
 
 ### VPC 서버 타입
-
-![Untitled](Associate%20Course%201%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20cd47a92217ef4afbb04b615166540e28/Untitled%201.png)
+![3](https://github.com/yj-leez/NCP-WIL/assets/77960090/54d18f4c-0a88-429d-815d-b54cbbc14858)
 
 ### Classic Bare Metal Server
 
@@ -101,7 +95,8 @@
 
 ### 국가별 지원 서버 타입
 
-![스크린샷 2023-07-19 오후 12.02.46.png](Associate%20Course%201%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20cd47a92217ef4afbb04b615166540e28/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-07-19_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_12.02.46.png)
+<img width="654" alt="4" src="https://github.com/yj-leez/NCP-WIL/assets/77960090/36554246-62ee-4de3-b614-3aca038a2a42">
+
 
 ## 3강. ****(Compute) 서버 Operation 방안 소개****
 
@@ -191,10 +186,11 @@
     - Subnet을 이용하여 VPC 안에서 Segment 생성 관리 가능
 - Peering
     - 내 VPC간 연결 뿐만 아니라 다른 계정과의 VPC 연결도 가능
-
-![Untitled](Associate%20Course%201%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%20cd47a92217ef4afbb04b615166540e28/Untitled%202.png)
-
 - AGC & NACL ; NACL 검사 후 → ACG 검사 진행
+![5](https://github.com/yj-leez/NCP-WIL/assets/77960090/710380d8-c74f-4007-a731-f1f9eea50fff)
+
+
+
     
     
     | ACG | Network ACL |
