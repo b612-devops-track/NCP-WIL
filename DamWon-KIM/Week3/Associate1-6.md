@@ -176,7 +176,7 @@ vpc 환경 → vpc → subnet → server 만드는 작업
 1. vpc 만들기
    
 2. vpc - Network ACL lab2-vpc-web-nacl 생성, Rule 설정
-    
+    ![Network ACL 보안과 관련된 사항.jpg](Network ACL 보안과 관련된 사항.jpg)
 3. [inbound 설정하고 나서도 outbound 설정하기]
     
 inbound로 들어올 수 있어도 나갈 때 outbound룰에 accept allow가 없다면 막힌다
