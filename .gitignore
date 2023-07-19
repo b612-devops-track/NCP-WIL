@@ -134,3 +134,21 @@ dist
 
 # DS_Store
 .DS_Store
+
+# other folders
+DamWon-KIM/
+eugene028/
+ghdtjgus76/
+KeeDongMON/
+kongnayeon/
+Lee-Dongwook/
+leedohyun/
+lmin402/
+nx006/
+Ohseungyoen3773/
+one62/
+RyeJiye/
+yj-leez/
+
+# my gitignore
+.gitignore
