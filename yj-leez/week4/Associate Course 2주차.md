@@ -55,8 +55,8 @@ L7(Application Layer) 기능 제공 → 애플리케이션 로드밸런서 ( HTT
 
 - 고객의 사내망과 NCP 간 사설 통신을 위한 IPSEC VPN
     - IPsec VPN터널을 통해 이동하는 패킷은 아래처럼 패킷이 가진 헤더, IP주소, 데이터 부분이 모두 암호화 처리되어 전달
-    
-    ![Untitled](Associate%20Course%202%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%200dbbfc9e936048e79583d0369b1b35b2/Untitled.png)
+    ![1-1](https://github.com/yj-leez/NCP-WIL/assets/77960090/878f9dc3-705a-44ba-9f51-85f9ec804111)
+
     
 - 고객의 VPN 장비와 NCP VPN 장비 간 터널링 연결 제공 (통신 방식 호환이 되어야 함)
 - NCP 서버들은 Private Subnet 대역(192.168.x.x) 으로 통신 필요
