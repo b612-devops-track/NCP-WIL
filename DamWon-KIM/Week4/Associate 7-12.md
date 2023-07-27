@@ -47,7 +47,7 @@ CDN </br>
 4. 리스너 : 로드밸런서가 어떤 프로토콜을 수신대기하고 있을지에 대한 설정
 5. Global DNS 설정
 6. CDN 설정  </br>
-![캐싱설정.jpg](캐싱설정.jpg)
+![네이버클라우드플랫폼의object_storage를이용하기.jpg](네이버클라우드플랫폼의object_storage를이용하기.jpg)
 
 ## 9강
 
