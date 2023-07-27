@@ -1,38 +1,44 @@
 ## 7강
-애플리케이션 로드밸런서
-HTTP, HTTPS를 사용하는 웹 애플리케이션에 보다 유연한 구성이 가능
-
-고정 IP 제공
-URL 기반 제공
+### ⛳Load Balancer </br>
+Target Group을 먼저 설정하고 해당 Target Group에 대해서 Load Balancing을 하게 된다
+  * 타겟 그룹 안에 있는 서버를 다른 타겟 그룹에 속하게 할 수 있지만 타겟 그룹을 다수의 로드 밸런서에 연결할 수는 없다
 
 알고리즘은 3가지 제공
-네트워크 로드밸런서
-고성능의 분산처리 가능
+  * Round Robin : 클라이언트에서 요청이 오면 서버에 1개씩 분배하는 방식
+  * Least Connection : 클라이언트 연결이 제일 적은 서버에게 새로운 커넥션을 분배하는 방식
+  * Source IP Hash : 클라이언트 IP에 대한 해시테이블을 가지고 클라이언트 IP에 매핑되는 서버에 새로운 커넥션을 분배하는 방식
 
-Client IP가 그대로 로깅
+    
+1. 애플리케이션 로드밸런서
+ * HTTP, HTTPS를 사용하는 웹 애플리케이션에 보다 유연한 구성이 가능
+ * 고정 IP 제공
+ * URL 기반 제공
 
-알고리즘은 Hash, RR만 제공
+2. 네트워크 로드밸런서
+ * 고성능의 분산처리 가능
+ * Client IP가 그대로 로깅
+ * 알고리즘은 Hash, RR만 제공
 
-네트워크 프록시 로드밸런서
-Classic과 유사한 Proxy 로드밸런서
+3. 네트워크 프록시 로드밸런서
+ * Classic과 유사한 Proxy 로드밸런서
 
-Load Balancer
-L7(Application Layer)기능 제공 - 애플리케이션 로드밸런서
-HTTP/HTTPS 트래픽에 대해서 패킷 헤더를 확인하여 Application 레벨에서의 분기처리를 제공한다. 로드밸런서의 리스너에 Host Header 기반 분기처리, URL Path Pattern 기반 분기처리, 가중치 기반 분기처리 , Redirectio 응답처리와 같은 규칙이 지원되어 보다 상세한 고급 서비스 구성이 가능하다
+#### Load Balancer </br>
+L7(Application Layer)기능 제공 - 애플리케이션 로드밸런서 </br>
+HTTP/HTTPS 트래픽에 대해서 패킷 헤더를 확인하여 Application 레벨에서의 분기처리를 제공한다. 로드밸런서의 리스너에 Host Header 기반 분기처리, URL Path Pattern 기반 분기처리, 가중치 기반 분기처리 , Redirection 응답처리와 같은 규칙이 지원되어 보다 상세한 고급 서비스 구성이 가능하다 </br>
 
-Load Balancer 모니터링
-로드밸런서에 대해서는 기본 모니터링 정보를 제공하며 서버 모니터링과 마찬가지로 기간 선택에 따라 모니터링 정보 수집 주기를 1분, 5분, 2시간, 1일 단위로 제공한다. 
-네트워크 로드밸런서 모니터링은 Concurrent Connection, 초당 Connection, Traffic in, (Un)Available hosts 등 5가지 항목의 정보를 제공하며, 애플리케이션 로드밸런서는 Traffic Out을 포함하여 6가지 항목을 제공한다
+#### Load Balancer 모니터링 </br>
+로드밸런서에 대해서는 기본 모니터링 정보를 제공하며 서버 모니터링과 마찬가지로 기간 선택에 따라 모니터링 정보 수집 주기를 1분, 5분, 2시간, 1일 단위로 제공한다.  </br>
+네트워크 로드밸런서 모니터링은 Concurrent Connection, 초당 Connection, Traffic in, (Un)Available hosts 등 5가지 항목의 정보를 제공하며, 애플리케이션 로드밸런서는 Traffic Out을 포함하여 6가지 항목을 제공한다 </br>
 
-Load Balancer 포트 설정
-여러 개의 로드밸런서 규칙을 동시에 설정할 수 있다. 로드밸런서 규칙을 설정할 때는 로드밸런서 포트를 다른 로드밸런서 규칙의 포트와 다르게 설정해야 한다. 서버 포트는 다른 로드밸런서 규칙의 서버 포트와 동일하게 설정해도 된다.
+#### Load Balancer 포트 설정 </br>
+여러 개의 로드밸런서 규칙을 동시에 설정할 수 있다. 로드밸런서 규칙을 설정할 때는 로드밸런서 포트를 다른 로드밸런서 규칙의 포트와 다르게 설정해야 한다. 서버 포트는 다른 로드밸런서 규칙의 서버 포트와 동일하게 설정해도 된다. </br>
 
 Network Load Balancer : Inbound에 대해서는 로드밸런서가 중개를 하지만 Outbound에 대해서는 서버가 클라이언트한테 직접 traffic을 전달하게 된다
 DNS : 글로벌 dns로 제공될 것
 외부의 Legacy에서의 운영되고 있는 서버를 origin 서버로 구성할 수도 있다
 
-CDN
-실제 서버의 비용을 줄일 수 있고, 사용자 입장에서 훨씬 빠른 latency를 추가시킬 수 있다
+CDN </br>
+실제 서버의 부하를 줄여서 traffic 비용은 동일하지만 origin 서버의 비용을 줄일 수 있고, 사용자 입장에서 훨씬 빠른 latency를 추가시킬 수 있다
 
 ## 8강
 1. Load Balancer 설정하기
@@ -40,38 +46,34 @@ CDN
 3. lab-tg로 이름 설정함
 4. 리스너 : 로드밸런서가 어떤 프로토콜을 수신대기하고 있을지에 대한 설정
 5. Global DNS 설정
-6. CDN 설정
+6. CDN 설정  </br>
 ![캐싱설정.jpg](캐싱설정.jpg)
 
 ## 9강
 
-IPSEC VPN
+IPSEC VPN </br>
+-vpc로도 제공될 예정이다  </br>
+고객의 VPN 장비와 NCP VPN 장비 간 터널링 연결 제공(통신 방식 호환이 되어야 함)  </br>
+NCP 서버들은 Private Subnet 대역(102.168.x.x)으로 통신 필요  </br>
+BW 최대 30Mbps 제공 (10M,20M,30Mbps)  </br>
+ </br>
+은행, 금융권에서 통신할 때  </br>
+해당 통신사에서 방화벽을 운영하게 되면 해당 IP를 알려달라고 해야한다  </br>
+그런데 이 공인 IP가 일반적인 outtraffic의 경우에는 변하게 됨 → 고정할 필요가 있는데 이 때 쓰이는게 NAT Gateway이다  </br>
+나가는 공인 IP를 구매한다고 생각하면 되고 그 때 라우터 설정을 통해서 금융권이나 통신사에 나갈 경우에 대해서만 NAT Gateway를 통해 나가는 것으로 설정하면 된다  </br>
+autoscaling으로 서버가 늘어난 경우엔 서버 그룹 안에 NAT Gateway 설정란이 있다  </br>
 
--vpc로도 제공될 예정이다
-고객의 VPN 장비와 NCP VPN 장비 간 터널링 연결 제공(통신 방식 호환이 되어야 함)
-NCP 서버들은 Private Subnet 대역(102.168.x.x)으로 통신 필요
+### NAT Gateway
 
-BW 최대 30Mbps 제공 (10M,20M,30Mbps)
+비공인 IP를 가진 다수의 서버에게 대표 공인 IP를 이용한 외부 접속을 제공
+ * NAT Gateway를 통해 외부로 접속할 때 사용되는 대표 공인 IP는 해당 NAT Gateway만 독점적으로 사용하는 IP
+ * Auto Scaling과 연계된 자동 설정 제공
+ * 보안상 다수의 공인 IP에 대한 ACL을 오픈할 수 없는 경우 혹은 공인 IP 생성 비용 절약 가능
 
-은행, 금융권에서 통신할 때
-해당 통신사에서 방화벽을 운영하게 되면 해당 IP를 알려달라고 해야한다
-그런데 이 공인 IP가 일반적인 outtraffic의 경우에는 변하게 됨 → 고정할 필요가 있는데 이 때 쓰이는게 NAT Gateway이다
-나가는 공인 IP를 구매한다고 생각하면 되고 그 때 라우터 설정을 통해서 금융권이나 통신사에 나갈 경우에 대해서만 NAT Gateway를 통해 나가는 것으로 설정하면 된다
-autoscaling으로 서버가 늘어난 경우엔 서버 그룹 안에 NAT Gateway 설정란이 있다
-
-NAT Gateway
-
-비공인 IP를 가진 다수의 서버에게 대표 공인 IP를 이용한 외보 접속을 제공
-
-NAT Gateway를 통해 외부로 접속할 때 사용되는 대표 공인 IP는 해당 NAT Gateway만 독점적으로 사용하는 IP
-Auto Scaling과 연계된 자동 설정 제공
-보안상 다수의 공인 IP에 대한 ACL을 오픈할 수 없는 경우 혹은 공인 IP 생성 비용 절약 가능
-
-Global Route Manager
-Local이 아니라 Global로 서비스를 구성하고자 할 때
-DNS 기반의 다양한 방법을 통해 네트워크 트래픽을 안정적으로 로드밸런싱하는 GSLB 상품
-
-(GSLB에서 Health Check를 해서 고장난 IP외의 다른 IP를 제공함)
+Global Route Manager  </br>
+Local이 아니라 Global로 서비스를 구성하고자 할 때 </br>
+DNS 기반의 다양한 방법을 통해 네트워크 트래픽을 안정적으로 로드밸런싱하는 GSLB 상품 </br>
+IP에 대한 Health Check만 제공 (GSLB에서 Health Check를 해서 고장난 IP외의 다른 IP를 제공함)
 DNS 기반의 로드밸런싱 서비스 제공을 통해서 지역별 트래픽 기반 부하 부산, DR 구축 등에 사용할 수 있는 상품
 로드밸런싱 타입은 4가지 제공 (Round Robin, Weighted, GeoLocation, Failover)
 
@@ -95,13 +97,13 @@ event rule 생성
 ## 11강
 Storage 서비스 소개
 
-Object Storage
-Storage : 가격이 저렴하고 사용이 편리해야 할텐데 요구조건 만족하는게 Object Storage
-인터넷상에 원하는 데이터를 저장하고 사용할 수 있도록 구축된 오브젝트 스토리지
-객체 기반의 무제한 파일 저장 스토리지
+Object Storage  </br>
+Storage : 가격이 저렴하고 사용이 편리해야 할텐데 요구조건 만족하는게 Object Storage  </br>
+인터넷상에 원하는 데이터를 저장하고 사용할 수 있도록 구축된 오브젝트 스토리지  </br>
+객체 기반의 무제한 파일 저장 스토리지  </br>
 
-콘솔, RESTful API, SDK 등의 다양한 방법으로 오브젝트들을 고나리하고, 저장된 파일은 각 파일마다 고유한 접근 URL이 부여되어 인터넷상에서 여러 사용자가 쉽게 접근 가능
-정적 웹 사이트 호스팅 가능
+콘솔, RESTful API, SDK 등의 다양한 방법으로 오브젝트들을 고나리하고, 저장된 파일은 각 파일마다 고유한 접근 URL이 부여되어 인터넷상에서 여러 사용자가 쉽게 접근 가능  </br>
+정적 웹 사이트 호스팅 가능  </br>
 
 Object Storage 특징
 S3 Compatibility API 지원
