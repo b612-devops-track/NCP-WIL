@@ -1,4 +1,4 @@
-![mysql 설치.jpg](mysql 설치.jpg)
+![mysql_설치.jpg](mysql_설치.jpg)
 
 
 [참고 사이트]
