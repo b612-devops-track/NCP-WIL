@@ -55,7 +55,7 @@ Elasticsearch Service
 CLA</br>
 
 Agent 설치완료</br>
-![agent설치완료.jpg](agent설치완료.jpg)
+![agent설치완료_.jpg](agent설치완료_.jpg)
 
 
 ## 21강
