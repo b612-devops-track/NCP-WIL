@@ -52,9 +52,9 @@ Elasticsearch Service
  
 ## 20강 (Analytics) Cloud Log Analytics 활용법 데모
 
-CLA</br></br>
+CLA</br>
 
-Agent 설치완료
+Agent 설치완료</br>
 ![Agent설치완료.jpg](Agent설치완료.jpg)
 
 
